@@ -1,0 +1,566 @@
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+header{
+    background-size: 100%;
+    background-image: 
+            linear-gradient(to bottom, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 1)),
+            url(images/header.jpg); /* importer l'image et placer un effet fondu bottom */
+    height: 80vh;
+
+}
+
+
+/* nav */
+
+.nav_1{
+    display: flex;
+    color: white;
+    
+}
+.nav_2{
+    margin-left: 6em;
+}
+
+.nav_3{
+    display: flex;
+    margin-left: 50em;
+    gap: 20px;
+}
+
+/* animation navbar */
+
+.nav_3{
+    list-style: none;
+    color: white;
+    display: flex;
+    gap: 25px;
+    float: right;
+    margin-left: 50em;
+    font-weight: bolder;
+    flex-direction: row; 
+    opacity: 0; 
+    animation: fadeInFromTop 1s ease-in-out forwards; 
+}
+
+
+
+.nav_3 li {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideDown 0.5s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* Création de l'animation qui fait apparaître les éléments */
+@keyframes fadeInFromTop {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation spécifique pour chaque élément de la nav (Slide de haut en bas)  */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* 
+Délai d'animation pour chaque élément afin qu'ils apparaissent un à un  */
+.ul_header li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+
+
+
+
+/* visite */
+.sec_visite{
+    margin-left: 40em;
+    margin-top: 15em;
+
+}
+
+.HI{
+    color: rgba(27, 21, 21, 0.273);
+}
+
+.h1_visite{
+
+}
+
+.p_visite{
+    display: flex;
+}
+
+.btn_visite{
+    background-color: #695AA6;
+    width: 120px;
+    height: 30px;
+    border-radius: 2em;
+    color: white;
+}
+
+/* about Me */
+.section_about{
+    display: flex;
+    margin-left: 15em;
+
+}
+
+
+.img_about{
+    display: flex;
+    margin-left: 10em;
+    margin-bottom: 15em;
+    height: 250px;
+    width: 250px;
+    
+}
+
+
+.tout_about{
+    margin-bottom: 15em;
+}
+
+
+.h1_about{
+    color:  #695AA6;
+    font-weight: bolder;
+    
+
+}
+
+.btn_aa{
+    color: #695AA6;
+    border-radius: 2em;
+    padding: 5px;
+}
+
+/* service */
+
+.div_haut_service{
+   margin-left: 48%;
+
+}
+
+.tout_service{
+    display: flex;
+    margin-left: 9em;
+    gap: 150px;
+    margin-top: 75px;
+
+}
+
+.p_service{
+    color: #695AA6;
+    font-weight: bolder ;
+}
+
+.img_sevice{
+    margin-top: 50px;
+    width: 150px;
+    height: 70px;
+    transition: transform 2s;
+}
+
+.border1{
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    align-content: center;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+}
+
+.p_service,.anim_service{
+    transition: transform 2s;
+}
+
+.anim_service{
+    margin-left: 10px;
+    margin-top: 50px;
+    width: 90%;
+    font-size: smaller;
+    text-align: center ;
+    transform: translateY(20px);
+    align-items: center;
+
+}
+
+.tout_service > div:hover .img_sevice{
+    transform: translateY(-10.5em);
+}
+
+.tout_service > div:hover .p_service{
+    transform: translateY(-10.5em);
+}
+
+.tout_service > div:hover .anim_service{
+    transform: translateY(-10.5em);
+}
+
+
+
+
+/* portfolio */
+
+.div_haut_portfolio{
+    margin-left: 47%;
+    margin-top: 100px;
+}
+
+.img_portfolio{
+    display: flex;
+    margin-left: 13%;
+    gap: 30px;
+    margin-top: 75px;
+    width: 350px;
+    height: 350px;
+}
+
+.h1_portfolio{
+    color: #695AA6;
+}
+
+
+
+
+/* portfolio transition  */
+
+
+
+/* pass */
+.section_pass{
+    display: flex;
+    margin-left: 25%;
+    margin-top: 100px;
+}
+
+.div_haut_pass{
+    margin-left: 45%;
+    margin-top: 100px;
+}
+
+.h1_pass{
+    color: #695AA6;
+}
+
+.img_pass{
+    display: flex;
+    width: 100px;
+    height: 80px;
+    margin-left: 32%;
+}
+
+.red{
+    color: red;
+}
+     /* moto */
+
+.moto{
+    border: 1px solid black;
+    height: 400px;
+    width: 250px;
+    align-content: center;
+    text-align: center;
+}
+
+.btn_pass{
+    background-color: #695AA6;
+    color: white;
+    height: 30px;
+}
+
+/* milieu "nav" */
+
+.section_milieu{
+    margin-top: 100px;
+    background-color: #695AA6;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.div_milieu{
+    color: white;
+    /* margin-left: 20%; */
+    padding-top: 10px;
+    align-content: center;
+    align-items: center;
+}
+
+.btn_milieu{
+    /* margin-left: 40%; */
+    border-radius: 15%;
+    border: none;
+    /* padding-top: 50px; */
+    align-content: center;
+    align-items: center;
+
+}
+.btn{
+    height: 30px;
+    width: 100px;
+    font-weight: bolder;
+}
+
+
+/* testmonial */
+
+.div_testmonial{
+    margin-left: 40em;
+    margin-top: 100px;
+
+}
+
+.h1_testmonial{
+    color: #695AA6;
+}
+
+.img_test{
+    border-radius: 2em;
+    height: 60px;
+    width: 60px;
+    margin-top: 30px;
+    position: absolute;
+    left: -30px;
+    
+}
+
+.div_testmonial1{
+    display: flex;
+    margin-left: 15em;
+    border: 1px solid  black;
+    height: 140px;
+    width: 25em;
+    position: relative;
+    padding-left: 25px;
+
+}
+
+.p_test{
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.div_testmonial2{
+    display: flex;
+    margin-left: 5em;
+    border: 1px solid  black ;
+    height: 140px;
+    width: 25em;
+    position: relative;
+    padding-left: 25px;
+    
+}
+
+.separe{
+    display: flex;
+    margin-top: 40px;
+}
+
+/* blog */
+
+.div_blog{
+    margin-top: 150px;
+    margin-left: 45%;
+}
+
+.h1_blog{
+    color: #695AA6;
+    font-weight: bolder;
+}
+       /* img1 et 2 */
+
+.border_blog{
+    display: flex;
+    margin-left: 100px;
+    gap: 30px;
+    border: 1px solid  black ;
+    margin-bottom: 20px;
+    margin-right: 120px;
+}
+.img_blog{
+    height: 250px;
+    width: 300px;
+}
+
+.a_blog{
+    color: #695AA6;
+
+}
+
+
+/* contact me */
+
+.contact{
+    margin-top: 100px;
+    margin-left: 45%;
+}
+
+.h1_contact{
+    color: #695AA6;
+    font-weight: bolder;
+}
+
+
+/* nav bas */
+
+.div_nav_bas{
+    display: flex;
+    margin-top: 50px;
+}
+
+.h1_nav_bas{
+    color: #695AA6;
+    font-weight: bolder;
+    margin-left: 10em;
+}
+.ul_nav_bas{
+    display: flex;
+    gap: 30px;
+    margin-left: 30em;
+}
+
+.ul_nav_bas li{
+    list-style: none;
+    
+}
+
+.h2_test{
+    color: #695AA6;
+}
+
+/* texte */
+
+.form_texte{
+    margin-left: 35% ;
+    opacity: 0.6;
+}
+
+.message{
+    height: 100px;
+    width: 500px;
+    border-radius: 0.4em;
+
+}
+
+.btn_texte button{
+    margin-left: 45%;
+    margin-top: 20px;
+    color: #695AA6;
+    padding: 5px;
+    border-radius: 0.3em;
+    border-color: #695AA6;
+}
+
+
+
+
+/* FOOTER */
+
+.div_footer_ligne{
+    height: 2px;
+    width: 70%;
+    background-color: rgba(128, 128, 128, 0.472);
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+
+.footer{
+    display: flex;
+}
+
+.footer p{
+    color: gray;
+    margin-top: 20px;
+    margin-left: 15%;
+}
+
+.footer div{
+    margin-top: 20px;
+    margin-left: 47em;
+}
+
+.color{
+    color: grey;
+}
+/* fin */
+
+
+
+
+/* téléphone */
+
+@media screen and (max-width:576px) {
+    body{
+        width: 400%;
+    }
+}
+
+/* tablette */
+
+@media screen and (min-width:576px) and (max-width:768px){
+    body{
+        width: 400%;
+    }
+    .nav_1{
+        margin-left: 40em;
+    }
+    .nav_3{
+        margin-left: 70em;
+    }
+    .sec_visite{
+        margin-left: 45em ;
+        font-size: 2em;
+        margin-top: 2em;
+    }
+    .btn_aa{
+        font-size: 1em;
+    }
+    div.tout_about{
+        font-size: 2em;
+        margin-left: 15em;
+    }
+    .img_about{
+        font-size: 2em;
+        margin-left: 20em;
+        height: 18em;
+    }
+    .tout_service{
+        margin-left: 30em;
+        font-size: 2em;
+    }
+
+    .img_portfolio{
+        margin-left: 55em;
+    }
+
+    .section_pass{
+        margin-left: 65em;
+    }
+}
